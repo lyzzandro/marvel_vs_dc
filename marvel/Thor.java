@@ -9,4 +9,8 @@ public class Thor extends Personagem {
     public String toString() {
         return nome;
     }
+
+    public Thor(int forca, int vida) {
+        super(forca, vida);
+    }
 }

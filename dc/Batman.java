@@ -10,4 +10,8 @@ public class Batman extends Personagem {
         return nome;
     }
 
+    public Batman(int forca, int vida) {
+        super(forca, vida);
+    }
+
 }

@@ -6,7 +6,7 @@ import dc.MulherMaravilha;
 import dc.Superman;
 import generics.Batalha;
 import generics.Personagem;
-import marvel.HomeDeFerro;
+import marvel.HomemDeFerro;
 import marvel.HomemAranha;
 import marvel.Hulk;
 import marvel.Thor;
@@ -15,7 +15,7 @@ public class Main {
 
     public static void main(String[] args) {
         /* Criando vetor para adicionar os personagens */
-        Object herois[] = new Object[2];
+        Personagem herois[] = new Personagem[2];
 
         /* Abrindo um novo scanner e mostrando lista e personagens */
         Scanner heroi1 = new Scanner(System.in);
@@ -34,42 +34,42 @@ public class Main {
          */
         switch (numeroHeroi1) {
             case 1:
-                Batman batman = new Batman();
+                Personagem batman = new Batman(100, 1000);
                 herois[0] = batman;
                 System.out.println(herois[0].toString());
                 break;
             case 2:
-                HomemAranha homemAranha = new HomemAranha();
+                Personagem homemAranha = new HomemAranha(120, 900);
                 herois[0] = homemAranha;
                 System.out.println(herois[0].toString());
                 break;
             case 3:
-                HomeDeFerro homeDeFerro = new HomeDeFerro();
-                herois[0] = homeDeFerro;
+                Personagem homemDeFerro = new HomemDeFerro(100, 1200);
+                herois[0] = homemDeFerro;
                 System.out.println(herois[0].toString());
                 break;
             case 4:
-                MulherMaravilha mulherMaravilha = new MulherMaravilha();
+                Personagem mulherMaravilha = new MulherMaravilha(180, 1000);
                 herois[0] = mulherMaravilha;
                 System.out.println(herois[0].toString());
                 break;
             case 5:
-                Thor thor = new Thor();
+                Personagem thor = new Thor(150, 1100);
                 herois[0] = thor;
                 System.out.println(herois[0].toString());
                 break;
             case 6:
-                Superman superman = new Superman();
+                Personagem superman = new Superman(150, 1200);
                 herois[0] = superman;
                 System.out.println(herois[0].toString());
                 break;
             case 7:
-                Hulk hulk = new Hulk();
+                Personagem hulk = new Hulk(180, 1200);
                 herois[0] = hulk;
                 System.out.println(herois[0].toString());
                 break;
             case 8:
-                Flash flash = new Flash();
+                Personagem flash = new Flash(90, 1000);
                 herois[0] = flash;
                 System.out.println(herois[0].toString());
                 break;
@@ -98,42 +98,42 @@ public class Main {
          */
         switch (numeroHeroi2) {
             case 1:
-                Personagem batman = new Batman();
+                Personagem batman = new Batman(100, 1000);
                 herois[1] = batman;
                 System.out.println(herois[1].toString());
                 break;
             case 2:
-                Personagem homemAranha = new HomemAranha();
+                Personagem homemAranha = new HomemAranha(120, 900);
                 herois[1] = homemAranha;
                 System.out.println(herois[1].toString());
                 break;
             case 3:
-                Personagem homeDeFerro = new HomeDeFerro();
-                herois[1] = homeDeFerro;
+                Personagem homemDeFerro = new HomemDeFerro(100, 1200);
+                herois[1] = homemDeFerro;
                 System.out.println(herois[1].toString());
                 break;
             case 4:
-                Personagem mulherMaravilha = new MulherMaravilha();
+                Personagem mulherMaravilha = new MulherMaravilha(180, 1000);
                 herois[1] = mulherMaravilha;
                 System.out.println(herois[1].toString());
                 break;
             case 5:
-                Personagem thor = new Thor();
+                Personagem thor = new Thor(150, 1100);
                 herois[1] = thor;
                 System.out.println(herois[1].toString());
                 break;
             case 6:
-                Personagem superman = new Superman();
+                Personagem superman = new Superman(150, 1200);
                 herois[1] = superman;
                 System.out.println(herois[1].toString());
                 break;
             case 7:
-                Personagem hulk = new Hulk();
+                Personagem hulk = new Hulk(180, 1200);
                 herois[1] = hulk;
                 System.out.println(herois[1].toString());
                 break;
             case 8:
-                Personagem flash = new Flash();
+                Personagem flash = new Flash(90, 1000);
                 herois[1] = flash;
                 System.out.println(herois[1].toString());
                 break;
@@ -144,9 +144,14 @@ public class Main {
 
         }
 
+        System.out.println("--------------------------------------------------");
+
         System.out.println("Heroi 1 eh o/a " + herois[0].toString() + " e o heroi 2 eh o/a " + herois[1].toString());
 
-        Batalha.batalhar(Personoagem Hulk,Personagem herois[1]);
+        Batalha.batalhar(herois[0], herois[1]);
+
+        heroi1.close();
+        heroi2.close();
 
     }
 }

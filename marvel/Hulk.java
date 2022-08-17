@@ -9,4 +9,8 @@ public class Hulk extends Personagem {
     public String toString() {
         return nome;
     }
+
+    public Hulk(int forca, int vida) {
+        super(forca, vida);
+    }
 }

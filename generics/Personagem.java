@@ -6,14 +6,14 @@ package generics;
 public class Personagem {
     private int forca;
     private int vida;
-    private int ultimate;
+
+    public Personagem(int forca, int vida) {
+        this.forca = forca;
+        this.vida = vida;
+    }
 
     public void setForca(int forca) {
         this.forca = forca;
-    }
-
-    public void setUltimate(int ultimate) {
-        this.ultimate = ultimate;
     }
 
     public void setVida(int vida) {
@@ -26,10 +26,6 @@ public class Personagem {
 
     public int getVida() {
         return vida;
-    }
-
-    public int getUltimate() {
-        return ultimate;
     }
 
 }

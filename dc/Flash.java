@@ -9,4 +9,8 @@ public class Flash extends Personagem {
     public String toString() {
         return nome;
     }
+
+    public Flash(int forca, int vida) {
+        super(forca, vida);
+    }
 }

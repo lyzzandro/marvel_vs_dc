@@ -9,4 +9,8 @@ public class Superman extends Personagem {
     public String toString() {
         return nome;
     }
+
+    public Superman(int forca, int vida) {
+        super(forca, vida);
+    }
 }

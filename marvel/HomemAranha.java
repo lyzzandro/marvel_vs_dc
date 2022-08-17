@@ -9,4 +9,8 @@ public class HomemAranha extends Personagem {
     public String toString() {
         return nome;
     }
+
+    public HomemAranha(int forca, int vida) {
+        super(forca, vida);
+    }
 }

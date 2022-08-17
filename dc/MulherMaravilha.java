@@ -9,4 +9,8 @@ public class MulherMaravilha extends Personagem {
     public String toString() {
         return nome;
     }
+
+    public MulherMaravilha(int forca, int vida) {
+        super(forca, vida);
+    }
 }
