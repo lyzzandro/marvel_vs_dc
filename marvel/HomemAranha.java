@@ -17,17 +17,11 @@ public class HomemAranha extends Personagem implements regeneracao {
 
     @Override
     public void setVida(double vida) {
-        System.out.println(vida);
-        if (super.getVida() <= 0.0) {
-            regenerarVida();
-        } else {
-            super.setVida(vida);
-        }
+        this.regenerarVida(vida);
     }
 
     @Override
-    public void regenerarVida() {
-        System.out.println("Entrei");
-        super.setVida(400);
+    public void regenerarVida(double vida) {
+        super.setVida(Math.round(vida * 1.05));
     }
 }
