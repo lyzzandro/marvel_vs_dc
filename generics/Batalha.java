@@ -7,6 +7,9 @@ public class Batalha {
         while (true) {
             ataque(heroi1, heroi2);
             System.out.println("Vida heroi 2 " + heroi2.getVida());
+            if (heroi1.getVida() <= 0 || heroi2.getVida() <= 0) {
+                break;
+            }
             ataque(heroi2, heroi1);
             System.out.println("Vida heroi 1 " + heroi1.getVida());
             if (heroi1.getVida() <= 0 || heroi2.getVida() <= 0) {

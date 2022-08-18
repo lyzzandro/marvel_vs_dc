@@ -17,141 +17,100 @@ public class Main {
         /* Criando vetor para adicionar os personagens */
         Personagem herois[] = new Personagem[2];
 
-        /* Abrindo um novo scanner e mostrando lista e personagens */
+        /*
+         * (HERÓI 1) Mostrando lista de herois, instanciando e adicionando no vetor de
+         * herois
+         */
         Scanner heroi1 = new Scanner(System.in);
         int numeroHeroi1;
-        System.out.println(
-                "---------------------------------------\n Escolha algum dos herois listados e digite o numero correspondente:");
-        System.out.println(
-                "---------------------------------------\n Batman - 1\n Homem Aranha - 2\n Homem de Ferro - 3\n Mulher Maravilha - 4\n Thor - 5\n Superman - 6\n Hulk - 7\n Flash - 8\n ---------------------------------------\n");
-
-        System.out.printf("Informe um numero:\n");
+        imprimirListaDeHerois();
         numeroHeroi1 = heroi1.nextInt();
+        escolherHerois(numeroHeroi1, 0, herois);
 
         /*
-         * Instanciando Heroi e adicionando no vetor(posicao 0), de acordo com o heroi
-         * informado no scanner
+         * (HERÓI 2) Mostrando lista de herois, instanciando e adicionando no vetor de
+         * herois
          */
-        switch (numeroHeroi1) {
-            case 1:
-                Personagem batman = new Batman(100, 1000);
-                herois[0] = batman;
-                System.out.println(herois[0].toString());
-                break;
-            case 2:
-                Personagem homemAranha = new HomemAranha(120, 900);
-                herois[0] = homemAranha;
-                System.out.println(herois[0].toString());
-                break;
-            case 3:
-                Personagem homemDeFerro = new HomemDeFerro(100, 1200);
-                herois[0] = homemDeFerro;
-                System.out.println(herois[0].toString());
-                break;
-            case 4:
-                Personagem mulherMaravilha = new MulherMaravilha(180, 1000);
-                herois[0] = mulherMaravilha;
-                System.out.println(herois[0].toString());
-                break;
-            case 5:
-                Personagem thor = new Thor(150, 1100);
-                herois[0] = thor;
-                System.out.println(herois[0].toString());
-                break;
-            case 6:
-                Personagem superman = new Superman(150, 1200);
-                herois[0] = superman;
-                System.out.println(herois[0].toString());
-                break;
-            case 7:
-                Personagem hulk = new Hulk(180, 1200);
-                herois[0] = hulk;
-                System.out.println(herois[0].toString());
-                break;
-            case 8:
-                Personagem flash = new Flash(90, 1000);
-                herois[0] = flash;
-                System.out.println(herois[0].toString());
-                break;
-
-            default:
-                System.out.println("Numero informado invalido");
-                break;
-
-        }
-
-        /* Abrindo um novo scanner e mostrando lista e personagens */
         Scanner heroi2 = new Scanner(System.in);
-
         int numeroHeroi2;
-        System.out.println(
-                "---------------------------------------\n Escolha algum dos herois listados e digite o numero correspondente:");
-        System.out.println(
-                "---------------------------------------\n Batman - 1\n Homem Aranha - 2\n Homem de Ferro - 3\n Mulher Maravilha - 4\n Thor - 5\n Superman - 6\n Hulk - 7\n Flash - 8\n ---------------------------------------\n");
-
-        System.out.printf("Informe um numero:\n");
+        imprimirListaDeHerois();
         numeroHeroi2 = heroi2.nextInt();
-
-        /*
-         * Instanciando Heroi e adicionando no vetor(posicao 0), de acordo com o heroi
-         * informado no scanner
-         */
-        switch (numeroHeroi2) {
-            case 1:
-                Personagem batman = new Batman(100, 1000);
-                herois[1] = batman;
-                System.out.println(herois[1].toString());
-                break;
-            case 2:
-                Personagem homemAranha = new HomemAranha(120, 900);
-                herois[1] = homemAranha;
-                System.out.println(herois[1].toString());
-                break;
-            case 3:
-                Personagem homemDeFerro = new HomemDeFerro(100, 1200);
-                herois[1] = homemDeFerro;
-                System.out.println(herois[1].toString());
-                break;
-            case 4:
-                Personagem mulherMaravilha = new MulherMaravilha(180, 1000);
-                herois[1] = mulherMaravilha;
-                System.out.println(herois[1].toString());
-                break;
-            case 5:
-                Personagem thor = new Thor(150, 1100);
-                herois[1] = thor;
-                System.out.println(herois[1].toString());
-                break;
-            case 6:
-                Personagem superman = new Superman(150, 1200);
-                herois[1] = superman;
-                System.out.println(herois[1].toString());
-                break;
-            case 7:
-                Personagem hulk = new Hulk(180, 1200);
-                herois[1] = hulk;
-                System.out.println(herois[1].toString());
-                break;
-            case 8:
-                Personagem flash = new Flash(90, 1000);
-                herois[1] = flash;
-                System.out.println(herois[1].toString());
-                break;
-
-            default:
-                System.out.println("Numero informado invalido");
-                break;
-
-        }
+        escolherHerois(numeroHeroi2, 1, herois);
 
         System.out.println("--------------------------------------------------");
 
-        System.out.println("Heroi 1 eh o/a " + herois[0].toString() + " e o heroi 2 eh o/a " + herois[1].toString());
+        /* Informando qual herói começa a batalha */
+        Scanner heroiInicialScanner = new Scanner(System.in);
+        int heroiInicial;
+        System.out.println("Escolha o heroi que iniciara a batalha");
+        System.out.println("1 - " + herois[0].toString() + "\n2 - " + herois[1].toString());
 
-        Batalha.batalhar(herois[0], herois[1]);
+        System.out.printf("Informe um numero: ");
+        heroiInicial = heroiInicialScanner.nextInt();
 
+        if (heroiInicial == 1) {
+            Batalha.batalhar(herois[0], herois[1]);
+        } else if (heroiInicial == 2) {
+            Batalha.batalhar(herois[1], herois[0]);
+        } else {
+            System.out.println("O heroi informado nao existe, entao iniciaremos com o primeiro heroi");
+            Batalha.batalhar(herois[0], herois[1]);
+        }
+
+        /* Fechamento dos Scanners */
         heroi1.close();
         heroi2.close();
+        heroiInicialScanner.close();
+    }
 
+    /* Método para imprimir lista de heróis */
+    public static void imprimirListaDeHerois() {
+        System.out.println(
+                "---------------------------------------\nEscolha algum dos herois listados e digite o numero correspondente:");
+        System.out.println(
+                "1 - Batman\n2 - Homem Aranha\n3 - Homem de Ferro\n4 - Mulher Maravilha\n5 - Thor\n6 - Superman\n7 - Hulk\n8 - Flash\n---------------------------------------\n");
+
+        System.out.printf("Informe um numero: ");
+    }
+
+    /* Método para escolher herói */
+    public static void escolherHerois(int numeroHeroi, int numVetor, Personagem herois[]) {
+        switch (numeroHeroi) {
+            case 1:
+                Personagem batman = new Batman(100, 1000);
+                herois[numVetor] = batman;
+                break;
+            case 2:
+                Personagem homemAranha = new HomemAranha(120, 900);
+                herois[numVetor] = homemAranha;
+                break;
+            case 3:
+                Personagem homemDeFerro = new HomemDeFerro(100, 1200);
+                herois[numVetor] = homemDeFerro;
+                break;
+            case 4:
+                Personagem mulherMaravilha = new MulherMaravilha(180, 1000);
+                herois[numVetor] = mulherMaravilha;
+                break;
+            case 5:
+                Personagem thor = new Thor(150, 1100);
+                herois[numVetor] = thor;
+                break;
+            case 6:
+                Personagem superman = new Superman(150, 1200);
+                herois[numVetor] = superman;
+                break;
+            case 7:
+                Personagem hulk = new Hulk(180, 1200);
+                herois[numVetor] = hulk;
+                break;
+            case 8:
+                Personagem flash = new Flash(90, 1000);
+                herois[numVetor] = flash;
+                break;
+            default:
+                System.out.println("Numero informado invalido");
+                break;
+        }
     }
 }
