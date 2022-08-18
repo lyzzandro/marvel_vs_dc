@@ -10,7 +10,7 @@ public class HomemDeFerro extends Personagem {
         return nome;
     }
 
-    public HomemDeFerro(int forca, int vida) {
+    public HomemDeFerro(double forca, double vida) {
         super(forca, vida);
     }
 

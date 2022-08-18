@@ -10,8 +10,7 @@ public class Batman extends Personagem {
         return nome;
     }
 
-    public Batman(int forca, int vida) {
+    public Batman(double forca, double vida) {
         super(forca, vida);
     }
-
 }

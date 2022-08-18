@@ -1,8 +1,9 @@
 package marvel;
 
 import generics.Personagem;
+import interfaces.superforca;
 
-public class Thor extends Personagem {
+public class Thor extends Personagem implements superforca {
     String nome = "Thor";
 
     @Override
@@ -10,7 +11,12 @@ public class Thor extends Personagem {
         return nome;
     }
 
-    public Thor(int forca, int vida) {
+    public Thor(double forca, double vida) {
         super(forca, vida);
+    }
+
+    @Override
+    public void aumentarForca() {
+        super.setForca(super.getForca() * 1.10);
     }
 }

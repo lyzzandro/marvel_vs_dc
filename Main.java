@@ -19,7 +19,7 @@ public class Main {
 
         /*
          * (HERÓI 1) Mostrando lista de herois, instanciando e adicionando no vetor de
-         * herois
+         * herois(POSICAO 0)
          */
         Scanner heroi1 = new Scanner(System.in);
         int numeroHeroi1;
@@ -29,7 +29,7 @@ public class Main {
 
         /*
          * (HERÓI 2) Mostrando lista de herois, instanciando e adicionando no vetor de
-         * herois
+         * herois(POSICAO 1)
          */
         Scanner heroi2 = new Scanner(System.in);
         int numeroHeroi2;

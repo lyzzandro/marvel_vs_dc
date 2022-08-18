@@ -1,8 +1,9 @@
 package dc;
 
 import generics.Personagem;
+import interfaces.superforca;
 
-public class MulherMaravilha extends Personagem {
+public class MulherMaravilha extends Personagem implements superforca {
     String nome = "Mulher Maravilha";
 
     @Override
@@ -10,7 +11,13 @@ public class MulherMaravilha extends Personagem {
         return nome;
     }
 
-    public MulherMaravilha(int forca, int vida) {
+    public MulherMaravilha(double forca, double vida) {
         super(forca, vida);
+        aumentarForca();
+    }
+
+    @Override
+    public void aumentarForca() {
+        super.setForca(super.getForca() * 1.10);
     }
 }

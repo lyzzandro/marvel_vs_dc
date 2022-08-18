@@ -1,31 +1,27 @@
 package generics;
 
-/**
- * Personagem
- */
 public class Personagem {
-    private int forca;
-    private int vida;
+    private double forca;
+    private double vida;
 
-    public Personagem(int forca, int vida) {
+    public Personagem(Double forca, double vida) {
         this.forca = forca;
         this.vida = vida;
     }
 
-    public void setForca(int forca) {
+    public void setForca(double forca) {
         this.forca = forca;
     }
 
-    public void setVida(int vida) {
+    public void setVida(double vida) {
         this.vida = vida;
     }
 
-    public int getForca() {
+    public double getForca() {
         return forca;
     }
 
-    public int getVida() {
+    public double getVida() {
         return vida;
     }
-
 }

@@ -10,7 +10,7 @@ public class Flash extends Personagem {
         return nome;
     }
 
-    public Flash(int forca, int vida) {
+    public Flash(double forca, double vida) {
         super(forca, vida);
     }
 }
