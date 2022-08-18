@@ -1,9 +1,9 @@
 package dc;
 
-import generics.Personagem;
+import generics.Heroi;
 import interfaces.superforca;
 
-public class MulherMaravilha extends Personagem implements superforca {
+public class MulherMaravilha extends Heroi implements superforca {
     String nome = "Mulher Maravilha";
 
     @Override

@@ -1,9 +1,9 @@
 package marvel;
 
-import generics.Personagem;
+import generics.Heroi;
 import interfaces.superforca;
 
-public class Thor extends Personagem implements superforca {
+public class Thor extends Heroi implements superforca {
     String nome = "Thor";
 
     @Override

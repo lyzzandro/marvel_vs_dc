@@ -1,9 +1,9 @@
 package marvel;
 
-import generics.Personagem;
+import generics.Heroi;
 import interfaces.regeneracao;
 
-public class HomemAranha extends Personagem implements regeneracao {
+public class HomemAranha extends Heroi implements regeneracao {
     String nome = "Homem Aranha";
 
     @Override

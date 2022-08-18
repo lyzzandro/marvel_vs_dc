@@ -1,8 +1,8 @@
 package marvel;
 
-import generics.Personagem;
+import generics.Heroi;
 
-public class HomemDeFerro extends Personagem {
+public class HomemDeFerro extends Heroi {
     String nome = "Homem de Ferro";
 
     @Override

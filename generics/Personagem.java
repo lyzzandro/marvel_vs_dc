@@ -1,6 +1,6 @@
 package generics;
 
-public class Personagem {
+public abstract class Personagem {
     private double forca;
     private double vida;
 

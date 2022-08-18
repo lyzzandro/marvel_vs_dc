@@ -3,7 +3,7 @@ package generics;
 public class Batalha {
 
     /* Batalhando os heróis */
-    public static void batalhar(Personagem heroi1, Personagem heroi2) {
+    public static void batalhar(Heroi heroi1, Heroi heroi2) {
         while (true) {
             ataque(heroi1, heroi2);
             System.out.println("Vida heroi " + heroi2 + " " + heroi2.getVida());
@@ -21,7 +21,7 @@ public class Batalha {
     }
 
     /* Método pra atacar */
-    private static void ataque(Personagem heroiAtacante, Personagem defensor) {
+    private static void ataque(Heroi heroiAtacante, Heroi defensor) {
         double vidaRestante = defensor.getVida() - heroiAtacante.getForca();
         if (vidaRestante < 0) {
             defensor.setVida(0);
@@ -31,7 +31,7 @@ public class Batalha {
     }
 
     /* Imprimindo herói que venceu a batalha */
-    private static void fimBatalha(Personagem heroi1, Personagem heroi2) {
+    private static void fimBatalha(Heroi heroi1, Heroi heroi2) {
         if (heroi1.getVida() <= 0) {
             System.out.println(heroi2 + " venceu a batalha");
         } else {

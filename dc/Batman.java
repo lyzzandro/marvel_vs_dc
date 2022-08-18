@@ -1,8 +1,8 @@
 package dc;
 
-import generics.Personagem;
+import generics.Heroi;
 
-public class Batman extends Personagem {
+public class Batman extends Heroi {
     String nome = "Batman";
 
     @Override

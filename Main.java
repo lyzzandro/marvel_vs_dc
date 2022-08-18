@@ -1,21 +1,14 @@
 import java.util.Scanner;
 
-import dc.Batman;
-import dc.Flash;
-import dc.MulherMaravilha;
-import dc.Superman;
-import generics.Batalha;
-import generics.Personagem;
-import marvel.HomemDeFerro;
-import marvel.HomemAranha;
-import marvel.Hulk;
-import marvel.Thor;
+import dc.*;
+import generics.*;
+import marvel.*;
 
 public class Main {
 
     public static void main(String[] args) {
         /* Criando vetor para adicionar os personagens */
-        Personagem herois[] = new Personagem[2];
+        Heroi herois[] = new Heroi[2];
 
         /*
          * (HERÓI 1) Mostrando lista de herois, instanciando e adicionando no vetor de
@@ -74,38 +67,38 @@ public class Main {
     }
 
     /* Método para escolher herói */
-    public static void escolherHerois(int numeroHeroi, int numVetor, Personagem herois[]) {
+    public static void escolherHerois(int numeroHeroi, int numVetor, Heroi herois[]) {
         switch (numeroHeroi) {
             case 1:
-                Personagem batman = new Batman(100, 1000);
+                Heroi batman = new Batman(100, 1000);
                 herois[numVetor] = batman;
                 break;
             case 2:
-                Personagem homemAranha = new HomemAranha(120, 900);
+                Heroi homemAranha = new HomemAranha(120, 900);
                 herois[numVetor] = homemAranha;
                 break;
             case 3:
-                Personagem homemDeFerro = new HomemDeFerro(100, 1200);
+                Heroi homemDeFerro = new HomemDeFerro(100, 1200);
                 herois[numVetor] = homemDeFerro;
                 break;
             case 4:
-                Personagem mulherMaravilha = new MulherMaravilha(180, 1000);
+                Heroi mulherMaravilha = new MulherMaravilha(180, 1000);
                 herois[numVetor] = mulherMaravilha;
                 break;
             case 5:
-                Personagem thor = new Thor(150, 1100);
+                Heroi thor = new Thor(150, 1100);
                 herois[numVetor] = thor;
                 break;
             case 6:
-                Personagem superman = new Superman(150, 1200);
+                Heroi superman = new Superman(150, 1200);
                 herois[numVetor] = superman;
                 break;
             case 7:
-                Personagem hulk = new Hulk(180, 1200);
+                Heroi hulk = new Hulk(180, 1200);
                 herois[numVetor] = hulk;
                 break;
             case 8:
-                Personagem flash = new Flash(90, 1000);
+                Heroi flash = new Flash(90, 1000);
                 herois[numVetor] = flash;
                 break;
             default:

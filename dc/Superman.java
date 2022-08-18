@@ -1,9 +1,9 @@
 package dc;
 
-import generics.Personagem;
+import generics.Heroi;
 import interfaces.superforca;
 
-public class Superman extends Personagem implements superforca {
+public class Superman extends Heroi implements superforca {
     String nome = "Superman";
 
     @Override

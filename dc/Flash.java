@@ -1,8 +1,8 @@
 package dc;
 
-import generics.Personagem;
+import generics.Heroi;
 
-public class Flash extends Personagem {
+public class Flash extends Heroi {
     String nome = "Flash";
 
     @Override
